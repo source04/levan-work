@@ -901,3 +901,47 @@ window.initHoverPreviews = initHoverPreviews;
   window.addEventListener('resize', updateMask);
   document.addEventListener('pointermove', onPointerMove, { passive: true });
 })();
+
+// Contact: copy email to clipboard (email not exposed in HTML)
+(function () {
+  const link = document.getElementById('copy-email');
+  if (!link) return;
+
+  const LOCAL_PART = 'me';
+  const DOMAIN = 'levan.work';
+  const EMAIL = LOCAL_PART + '@' + DOMAIN;
+  const ORIGINAL_TEXT = link.textContent || 'copy email';
+  let resetTimer = null;
+
+  function copy(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).catch(function () {});
+    }
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    } catch (e) {}
+  }
+
+  function showCopied() {
+    link.textContent = 'email copied';
+    if (resetTimer) clearTimeout(resetTimer);
+    resetTimer = setTimeout(function () {
+      link.textContent = ORIGINAL_TEXT;
+      resetTimer = null;
+    }, 3000);
+  }
+
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    copy(EMAIL);
+    showCopied();
+  });
+})();
