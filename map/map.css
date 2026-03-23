@@ -218,7 +218,7 @@
 }
 
 .map-main .map__vis {
-  height: calc(100vh - 2 * var(--pad-frame));
+  height: calc(var(--app-height) - 2 * var(--pad-frame));
   min-height: 0;
 }
 
