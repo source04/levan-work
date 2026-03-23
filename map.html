@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Map of me — Portfolio</title>
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="map/map.css" />
+    <script src="radio.js" defer></script>
+    <script src="map/map-data.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7" defer></script>
+    <script src="map/map.js" defer></script>
+    <script src="responsive-nav.js" defer></script>
+  </head>
+  <body class="map-page">
+    <div class="portfolio">
+      <main class="map-main" aria-label="Map of me">
+        <div class="map__vis-container">
+          <div class="map__vis"></div>
+        </div>
+      </main>
+
+      <aside class="panel" aria-label="About">
+        <header class="panel__header">
+          <a class="logo" href="index.html" aria-label="Home">-,',-</a>
+          <nav class="nav" aria-label="Primary">
+            <a href="index.html">Index</a>
+            <a class="is-active" href="map.html"
+              ><span class="nav-label-desktop">Map of me</span
+              ><span class="nav-label-mobile">Stack</span></a
+            >
+          </nav>
+        </header>
+
+        <div class="panel__body">
+          <div class="intro">
+            <p class="lede">
+              A living visualisation of what currently shapes my thinking. It
+              gathers the subjects I’m engaged with right now — and the
+              connections forming between them. The map is never complete and
+              changes with my attention shifts.
+            </p>
+            <p class="lede">
+              You can think of it as some kind of my interpretation of now.
+            </p>
+            <p class="lede">
+              Inspired by Christoph Locher, as well as
+              A Rhizomatic Map of Visual Communication, referenced by
+              Locher as one of its conceptual sources.
+            </p>
+          </div>
+          <section class="map-stacks" aria-label="Current stack">
+            <div class="map-stacks__group">
+              <h3 class="map-stacks__title">Product &amp; Systems</h3>
+              <ul class="map-stacks__list">
+                <li>Figma</li>
+                <li>Design Systems</li>
+                <li>User Flows</li>
+              </ul>
+            </div>
+            <div class="map-stacks__group">
+              <h3 class="map-stacks__title">Workflow</h3>
+              <ul class="map-stacks__list">
+                <li>Notion</li>
+                <li>Slack</li>
+                <li>Linear</li>
+                <li>Are.na</li>
+              </ul>
+            </div>
+            <div class="map-stacks__group">
+              <h3 class="map-stacks__title">Prototype &amp; Code</h3>
+              <ul class="map-stacks__list">
+                <li>Framer</li>
+                <li>HTML/CSS</li>
+                <li>Git</li>
+                <li>Cursor</li>
+                <li>Claude</li>
+                <li>Lovable</li>
+              </ul>
+            </div>
+            <div class="map-stacks__group">
+              <h3 class="map-stacks__title">Extra</h3>
+              <ul class="map-stacks__list">
+                <li>Illustrator</li>
+                <li>Photoshop</li>
+                <li>Premiere Pro</li>
+                <li>Ableton</li>
+              </ul>
+            </div>
+          </section>
+
+          <div class="services">
+            <audio id="site-radio" preload="none" playsinline></audio>
+            <p class="services__copyright">© 2026 Levan Kurashvili</p>
+            <button
+              type="button"
+              class="radio-toggle"
+              id="radio-toggle"
+              aria-pressed="false"
+            >
+              <span class="radio-toggle__label">+ play my radio</span>
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

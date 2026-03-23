@@ -1,298 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>levan.work</title>
-  <link rel="icon" href="favicon/favicon.ico" sizes="any" />
-  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="favicon/favicon-96x96.png" type="image/png" sizes="96x96" />
-  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="favicon/site.webmanifest" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div id="preload-loader" class="preload-loader" aria-live="polite" aria-busy="true" role="status">
-    <div class="preload-loader__inner">
-      <div class="preload-loader__header">
-        <span class="preload-loader__title">levan.work</span>
-        <span class="preload-loader__icon" aria-hidden="true"><img src="imgs/levan.png" alt="" /></span>
-      </div>
-      <p class="preload-loader__desc">This is a personal space of my works, aiming to publish experiments with different digital studies.</p>
-      <div class="preload-loader__progress">
-        <span class="preload-loader__bar" id="preload-loader-bar" aria-hidden="true"><span class="preload-loader__bar-fill" id="preload-loader-fill"></span><span class="preload-loader__pct" id="preload-loader-pct">0%</span></span>
-      </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="works-drawing.js" defer></script>
+    <script src="work-tooltips.js" defer></script>
+    <script src="radio.js" defer></script>
+    <script src="contact.js" defer></script>
+    <script src="responsive-nav.js" defer></script>
+  </head>
+  <body>
+    <div class="portfolio">
+      <main class="works" aria-label="Selected work">
+        <section
+          class="work-frame work-frame--chladni"
+          data-work-tooltip="Chladni is a predictive maintenance platform for industrial vibration monitoring - I have designed an inner system operating at the intersection of machine learning, physical assets, and human responsibility."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/chladni_02.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame work-frame--chladni"
+          data-work-tooltip="Chladni is a predictive maintenance platform for industrial vibration monitoring - I have designed an inner system operating at the intersection of machine learning, physical assets, and human responsibility."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/chladni_05.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame work-frame--chladni"
+          data-work-tooltip="Chladni is a predictive maintenance platform for industrial vibration monitoring - I have designed an inner system operating at the intersection of machine learning, physical assets, and human responsibility."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/cladni_04.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame work-frame--chladni"
+          data-work-tooltip="Chladni is a predictive maintenance platform for industrial vibration monitoring - I have designed an inner system operating at the intersection of machine learning, physical assets, and human responsibility."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/cladni_07.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame work-frame--chladni"
+          data-work-tooltip="Chladni is a predictive maintenance platform for industrial vibration monitoring - I have designed an inner system operating at the intersection of machine learning, physical assets, and human responsibility."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/cladni_09.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="VELI.STORE - One of the most popular e-commerce platforms in Georgia. The platform focuses on saving customers time through a seamless, user-centered online shopping experience."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/veli_06.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="VELI.STORE - One of the most popular e-commerce platforms in Georgia. The platform focuses on saving customers time through a seamless, user-centered online shopping experience."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/veli_07.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="VELI.STORE - One of the most popular e-commerce platforms in Georgia. The platform focuses on saving customers time through a seamless, user-centered online shopping experience."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/veli_08.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="VELI.STORE - One of the most popular e-commerce platforms in Georgia. The platform focuses on saving customers time through a seamless, user-centered online shopping experience."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/veli_02.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="FLICKER.GLASS - Flicker Glass is a radio show hosted by Sandro Tediashvili (Tedi) on Mutant Radio Tbilisi."
+        >
+          <div class="work-frame__media">
+            <video
+              src="imgs/works/glass_1.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label=""
+            ></video>
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="FLICKER.GLASS - Flicker Glass is a radio show hosted by Sandro Tediashvili (Tedi) on Mutant Radio Tbilisi."
+        >
+          <div class="work-frame__media">
+            <video
+              src="imgs/works/glass_2.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label=""
+            ></video>
+          </div>
+        </section>
+        <section
+          class="work-frame work-frame--split"
+          data-work-tooltip="FLICKER.GLASS - Flicker Glass is a radio show hosted by Sandro Tediashvili (Tedi) on Mutant Radio Tbilisi."
+        >
+          <div class="work-frame__media work-frame__media--split">
+            <video
+              src="imgs/works/glass_3.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label=""
+            ></video>
+            <video
+              src="imgs/works/glass_4.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label=""
+            ></video>
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="JPG - E-commerce platform for Printshop and Artist community based in Tbilisi."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/jpg_01.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="JPG - E-commerce platform for Printshop and Artist community based in Tbilisi."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/jpg_02.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="JPG - E-commerce platform for Printshop and Artist community based in Tbilisi."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/jpg_09.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="JPG - E-commerce platform for Printshop and Artist community based in Tbilisi."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/jpg_10.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="SHIORI (栞) - SHIORI (栞) is a place where I collect some writings, prose, poetry, movies, videos and TV shows, suggested by people (and myself:)."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/shiori_01.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="SHIORI (栞) - SHIORI (栞) is a place where I collect some writings, prose, poetry, movies, videos and TV shows, suggested by people (and myself:)."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/shiori_02.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="SHIORI (栞) is a place where I collect some writings, prose, poetry, movies, videos and TV shows, suggested by people (and myself:)."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/shiori_05.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+        <section
+          class="work-frame"
+          data-work-tooltip="My personal radio, streaming the music 24/7."
+        >
+          <div class="work-frame__media">
+            <img
+              src="imgs/works/radio.png"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+      </main>
+
+      <aside class="panel" aria-label="About">
+        <header class="panel__header">
+          <a class="logo" href="index.html" aria-label="Home">-,',-</a>
+          <nav class="nav" aria-label="Primary">
+            <a class="is-active" href="index.html">Index</a>
+            <a href="map.html"
+              ><span class="nav-label-desktop">Map of me</span
+              ><span class="nav-label-mobile">Stack</span></a
+            >
+          </nav>
+        </header>
+
+        <div class="panel__body">
+          <div class="intro">
+            <div class="greeting">
+              <span class="greeting__text">Hi, I'm Levan</span>
+              <img
+                class="greeting__avatar"
+                src="imgs/levan.png"
+                alt=""
+                width="16"
+                height="16"
+                decoding="async"
+              />
+            </div>
+            <p class="lede">
+              Specialising in product design, I build user-focused digital
+              experiences and use this space to publish experiments and ongoing
+              studies across interfaces, systems, and interaction design.
+            </p>
+            <p class="lede">
+              I'm currently exploring how web design can reclaim attention —
+              creating digital spaces that slow interaction and encourage presence
+              over speed.
+            </p>
+            <p class="intro__cv-note">Full CV available upon request.</p>
+          </div>
+
+          <section class="contact" aria-label="Contact">
+            <ul class="contact__list">
+              <li class="contact__item">
+                <button
+                  type="button"
+                  class="contact__email"
+                  id="contact-email-copy"
+                >
+                  <span class="contact__email-label" aria-live="polite">Email</span>
+                  <span class="contact__detail">me@levan.work</span>
+                </button>
+              </li>
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="https://www.linkedin.com/in/levan-kurashvili-3b15b1124/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="contact__label">LinkedIn</span>
+                  <span class="contact__detail">Levan Kurashvili</span>
+                </a>
+              </li>
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="https://www.instagram.com/fjaartaf.zone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="contact__label">Instagram</span>
+                  <span class="contact__detail">fjaartaf.zone</span>
+                </a>
+              </li>
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="https://t.me/disstracked"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="contact__label">Telegram</span>
+                  <span class="contact__detail">@disstracked</span>
+                </a>
+              </li>
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="https://fjaartaf.zone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="contact__label">My radio</span>
+                  <span class="contact__detail">https://fjaartaf.zone/</span>
+                </a>
+              </li>
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="https://shiori.world/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="contact__label">Shiori</span>
+                  <span class="contact__detail">https://shiori.world/</span>
+                </a>
+              </li>
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="https://mindcontrolledrectifier.bandcamp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="contact__label">MCR</span>
+                  <span class="contact__detail">https://mcr.ge/</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <div class="services">
+            <audio id="site-radio" preload="none" playsinline></audio>
+            <p class="services__copyright">© 2026 Levan Kurashvili</p>
+            <button
+              type="button"
+              class="radio-toggle"
+              id="radio-toggle"
+              aria-pressed="false"
+            >
+              <span class="radio-toggle__label">+ play my radio</span>
+            </button>
+          </div>
+        </div>
+      </aside>
     </div>
-  </div>
-  <div class="custom-scrollbar" aria-hidden="true">
-    <div class="custom-scrollbar__thumb" id="scrollbar-thumb"></div>
-  </div>
-  <canvas id="cursor-drawing" class="cursor-drawing" aria-hidden="true"></canvas>
-  <div id="intro-drawing-mask" class="intro-drawing-mask" aria-hidden="true"></div>
-  <div class="header-spacer" aria-hidden="true"></div>
-  <header class="site-header">
-    <span class="header-url">https://levan.work/</span>
-    <div class="header-actions">
-      <button
-        type="button"
-        class="header-icon-btn"
-        id="download-drawing"
-        aria-label="Download your drawing"
-      >
-        <img src="imgs/icons/download.svg" alt="" />
-        <span class="header-icon-tooltip">Download your drawing</span>
-      </button>
-      <button
-        type="button"
-        class="header-icon-btn"
-        id="reset-drawing"
-        aria-label="Reset drawing"
-      >
-        <img src="imgs/icons/refresh.svg" alt="" />
-        <span class="header-icon-tooltip">Reset drawing</span>
-      </button>
-    </div>
-    <span class="header-radio">
-      <span class="radio-toggle-wrap">
-        <button type="button" id="radio-toggle" class="radio-toggle">+ play my radio</button>
-        <span class="header-icon-tooltip radio-tooltip">My radio streams prepared collection of music 24/7</span>
-      </span>
-    </span>
-  </header>
-
-  <main class="main-content">
-    <section class="column-left">
-      <div class="intro">
-        <h1 class="intro-title">
-          <span class="intro-title-text">Hi, I'm Levan</span>
-          <span class="intro-title-icon" aria-hidden="true">
-            <img src="imgs/levan.png" alt="" />
-          </span>
-        </h1>
-        <p>Specialising in product design, I build user-focused digital experiences and use this space to publish experiments and ongoing studies across interfaces, systems, and interaction design.</p>
-        <p>I'm currently exploring how web design can reclaim attention — creating digital spaces that slow interaction and encourage presence over speed.</p> <p class="intro-map-link">Check the <a href="map/index.html">map of me</a> for a little more context on what currently occupies my mind.</p>
-        <p class="intro-cv">Full CV available upon request.</p>
-      </div>
-
-      <div class="projects">
-        <h1>Selected projects & works</h1>
-        <ul class="project-list">
-          <li class="project">
-            <div class="project-heading" data-project-description="One of the most popular e-commerce platforms in Georgia. The platform focuses on saving customers time through a seamless, user-centered online shopping experience.">
-              <span class="project-name project-name--veli">VELI.STORE</span><span class="project-role">{product design}</span>
-            </div>
-            <ul class="project-items">
-              <li data-preview="veli_02.png"><span class="project-item-label">-.01.-</span></li>
-              <li data-preview="veli_03.png"><span class="project-item-label">-.02.-</span></li>
-              <li data-preview="veli_05.png"><span class="project-item-label">-.03.-</span></li>
-            </ul>
-          </li>
-          <li class="project">
-            <div class="project-heading" data-project-description="Chladni is a predictive maintenance platform for industrial vibration monitoring — I have designed an inner system operating at the intersection of machine learning, physical assets, and human responsibility.">
-              <span class="project-name project-name--chladni">CHLADNI</span><span class="project-role">{product design}</span>
-            </div>
-            <ul class="project-items">
-              <li data-preview="chladni_01.png"><span class="project-item-label">-.04.-</span></li>
-              <li data-preview="chladni_02.png"><span class="project-item-label">-.05.-</span></li>
-              <li data-preview="chladni_03.png"><span class="project-item-label">-.06.-</span></li>
-              <li data-preview="cladni_04.png"><span class="project-item-label">-.07.-</span></li>
-              <li data-preview="chladni_05.png"><span class="project-item-label">-.08.-</span></li>
-              <li data-preview="cladni_06.png"><span class="project-item-label">-.09.-</span></li>
-              <li data-preview="cladni_07.png"><span class="project-item-label">-.10.-</span></li>
-              <li data-preview="cladni_08.png"><span class="project-item-label">-.11.-</span></li>
-              <li data-preview="cladni_09.png"><span class="project-item-label">-.12.-</span></li>
-              <li data-preview="cladni_10.png"><span class="project-item-label">-.13.-</span></li>
-              <li data-preview="chladni_11.png"><span class="project-item-label">-.14.-</span></li>
-              <li data-preview="chladni_12.png"><span class="project-item-label">-.15.-</span></li>
-              <li data-preview="chladni_13.png"><span class="project-item-label">-.16.-</span></li>
-              <li data-preview="chladni_14.png"><span class="project-item-label">-.17.-</span></li>
-              <li data-preview="chladni_15.png"><span class="project-item-label">-.18.-</span></li>
-            </ul>
-          </li>
-          <li class="project">
-            <div class="project-heading" data-project-description="Flicker Glass is a radio show hosted by Sandro Tediashvili (Tedi) on Mutant Radio Tbilisi.">
-              <span class="project-name project-name--glass">FLICKER.GLASS</span><span class="project-role">{product design, development}</span>
-            </div>
-            <ul class="project-items">
-              <li data-preview="glass_1.mp4" data-preview-width="1920" data-preview-height="1080"><span class="project-item-label">-.19.-</span></li>
-              <li data-preview="glass_2.mp4" data-preview-width="1920" data-preview-height="1080"><span class="project-item-label">-.20.-</span></li>
-              <li data-preview="glass_3.mp4" data-preview-width="1920" data-preview-height="1080"><span class="project-item-label">-.21.-</span></li>
-              <li data-preview="glass_4.mp4" data-preview-width="1920" data-preview-height="1080"><span class="project-item-label">-.22.-</span></li>
-              <li data-preview="glass_5.png"><span class="project-item-label">-.23.-</span></li>
-            </ul>
-          </li>
-          <li class="project">
-            <div class="project-heading" data-project-description="E-commerce platform for Printshop and Artist community based in Tbilisi.">
-              <span class="project-name project-name--jpg">JPG</span><span class="project-role">{product design}</span>
-            </div>
-            <ul class="project-items">
-              <li data-preview="jpg_01.webp"><span class="project-item-label">-.24.-</span></li>
-              <li data-preview="jpg_02.webp"><span class="project-item-label">-.25.-</span></li>
-              <li data-preview="jpg_04.webp"><span class="project-item-label">-.26.-</span></li>
-              <li data-preview="jpg_05.webp"><span class="project-item-label">-.27.-</span></li>
-              <li data-preview="jpg_06.webp"><span class="project-item-label">-.28.-</span></li>
-              <li data-preview="jpg_07.webp"><span class="project-item-label">-.29.-</span></li>
-              <li data-preview="jpg_08.webp"><span class="project-item-label">-.30.-</span></li>
-              <li data-preview="jpg_09.webp"><span class="project-item-label">-.31.-</span></li>
-              <li data-preview="jpg_10.webp"><span class="project-item-label">-.32.-</span></li>
-              <li data-preview="jpg_11.webp"><span class="project-item-label">-.33.-</span></li>
-            </ul>
-          </li>
-          <li class="project">
-            <div class="project-heading" data-project-description="SHIORI (栞) is a place where I collect some writings, prose, poetry, movies, videos and TV shows, suggested by people (and myself:).">
-              <span class="project-name project-name--shiori">SHIORI (栞)</span><span class="project-role">{product design, development}</span>
-            </div>
-            <ul class="project-items">
-              <li data-preview="shiori_01.webp"><span class="project-item-label">-.34.-</span></li>
-              <li data-preview="shiori_02.webp"><span class="project-item-label">-.35.-</span></li>
-              <li data-preview="shiori_03.webp"><span class="project-item-label">-.36.-</span></li>
-              <li data-preview="shiori_04.webp"><span class="project-item-label">-.37.-</span></li>
-              <li data-preview="shiori_05.webp"><span class="project-item-label">-.38.-</span></li>
-            </ul>
-          </li>
-          <li class="project">
-            <div class="project-heading" data-project-description="The idea of ​​the Performing Arts Laboratory involves experimental research and development of theatrical art, performance and other related performing practices.">
-              <span class="project-name project-name--pa">PA.LABORATORY</span><span class="project-role">{product design, development}</span>
-            </div>
-            <ul class="project-items">
-              <li data-preview="palab_01.webp"><span class="project-item-label">-.39.-</span></li>
-              <li data-preview="palab_02.webp"><span class="project-item-label">-.40.-</span></li>
-              <li data-preview="palab_03.webp"><span class="project-item-label">-.41.-</span></li>
-              <li data-preview="palab_04.webp"><span class="project-item-label">-.42.-</span></li>
-            </ul>
-          </li>
-          <li class="project">
-            <div class="project-heading" data-project-description="An experimental mobile archive interface for contemporary artists, built around principles of structured contribution, non-performative navigation, and deliberate slowness.">
-              <span class="project-name project-name--arc">ARC</span><span class="project-role">{product design}</span>
-            </div>
-            <ul class="project-items">
-              <li data-preview="arc_01.avif"><span class="project-item-label">-.43.-</span></li>
-              <li data-preview="arc_02.avif"><span class="project-item-label">-.44.-</span></li>
-              <li data-preview="arc_03.webp"><span class="project-item-label">-.45.-</span></li>
-              <li data-preview="arc_04.webp"><span class="project-item-label">-.46.-</span></li>
-            </ul>
-          </li>
-        </ul>      </div>
-
-      <div class="tools">
-        <h1>Stack</h1>
-
-        <div class="tools-group">
-          <h2 class="tools-group-title">Product &amp; Systems</h2>
-          <ul class="tools-list">
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Figma</span>
-              <img src="imgs/icons/Figma.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Design Systems</span>
-              <img src="imgs/icons/Design_systems.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>User Flows</span>
-              <img src="imgs/icons/User_flow.svg" alt="" class="tools-icon" /></span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tools-group">
-          <h2 class="tools-group-title">Prototype &amp; Code</h2>
-          <ul class="tools-list">
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Framer</span>
-              <img src="imgs/icons/Framer.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>HTML/CSS</span>
-              <span class="tools-icon-pair">
-                <img src="imgs/icons/Html.svg" alt="" class="tools-icon" />
-                <img src="imgs/icons/Css.svg" alt="" class="tools-icon" />
-              </span></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Git</span>
-              <img src="imgs/icons/Github.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Cursor</span>
-              <img src="imgs/icons/Cursor.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Claude</span>
-              <img src="imgs/icons/Claude.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Lovable</span>
-              <img src="imgs/icons/Lovable.svg" alt="" class="tools-icon" /></span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tools-group">
-          <h2 class="tools-group-title">Workflow</h2>
-          <ul class="tools-list">
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Notion</span>
-              <img src="imgs/icons/Notion.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Slack</span>
-              <img src="imgs/icons/Slack.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Are.na</span>
-              <img src="imgs/icons/Arena.svg" alt="" class="tools-icon" /></span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tools-group">
-          <h2 class="tools-group-title">Extra</h2>
-          <ul class="tools-list">
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Illustrator</span>
-              <img src="imgs/icons/Illustrator.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Photoshop</span>
-              <img src="imgs/icons/Photoshop.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Premiere Pro</span>
-              <img src="imgs/icons/Premiere.svg" alt="" class="tools-icon" /></span>
-            </li>
-            <li class="tools-item">
-              <span class="tools-item-label"><span>Ableton</span>
-              <img src="imgs/icons/Ableton.svg" alt="" class="tools-icon" /></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="contact">
-        <h1>Contact</h1>
-        <p><a href="#" id="copy-email">copy email</a></p>
-      </div>
-    </section>
-
-    <section class="column-right">
-      <p class="site-footer-note">
-        -,',- ver.1.0.2<br />
-        <span class="site-footer-note__desktop-hint">for the better experience, use the desktop version<br /></span>
-        2026_design &amp; development by levan.work
-      </p>
-    </section>
-  </main>
-  <div class="project-preview" id="project-preview" aria-hidden="true">
-    <img id="project-preview-img" alt="" />
-    <video id="project-preview-video" muted loop playsinline></video>
-  </div>
-  <div id="project-description-tooltip" class="project-description-tooltip" aria-hidden="true" role="tooltip"></div>
-  <div id="drawing-hint-tooltip" class="drawing-hint-tooltip" aria-hidden="true">
-    <span class="drawing-hint-row"><img src="imgs/icons/Click.svg" alt="" class="drawing-hint-icon" /> Click once anywhere to pin your drawing</span>
-    <span class="drawing-hint-row"><img src="imgs/icons/Download.svg" alt="" class="drawing-hint-icon" /> Click download in the header to save your drawing</span>
-    <span class="drawing-hint-row"><img src="imgs/icons/refresh.svg" alt="" class="drawing-hint-icon" /> Click reset in the header to clear your drawing</span>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+  </body>
 </html>

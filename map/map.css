@@ -1,11 +1,10 @@
-/* Map of me
-   ============================================================
-   Font variables:
-     --font           → Akzidenz Grotesk (body/sans)
-     --font-heading   → Gerstner Programm FSL (headings)
-   ============================================================ */
+/* Map of me — portfolio embed (fonts match site) */
+.map-page {
+  --font: "Suisse Intl", system-ui, -apple-system, sans-serif;
+  --font-heading: "Suisse Intl", system-ui, -apple-system, sans-serif;
+}
 
-/* ── Page chrome ── */
+/* ── Page chrome (standalone map page leftovers kept for reuse) ── */
 
 .main-content--map {
   grid-template-columns: 1fr;
@@ -16,14 +15,13 @@
   min-width: 0;
 }
 
-/* Back link at top — matches “map of me” link styling on home page */
 .map__back {
   margin: 0 0 24px;
   font-size: 14px;
 }
 
 .map__back a {
-  background-color: #E5EDFC;
+  background-color: #e5edfc;
   color: #2c2c2c;
   font-weight: 400;
   text-decoration: none;
@@ -34,7 +32,6 @@
   color: #ffffff;
 }
 
-/* Intro section (matches main page) */
 .map__intro {
   margin-bottom: 24px;
   max-width: 50ch;
@@ -65,28 +62,20 @@
   color: #888;
 }
 
-/* Prevent horizontal scrollbar from the 250px link bleed */
-body.map-page {
-  overflow-x: clip;
-}
 
-/* Top padding must account for .links bleed (250px) so the map does not overlap the intro. */
 .map__vis-container {
   overflow: visible;
-  padding: 150px 0 24px;
+  padding: var(--pad-frame);
+  box-sizing: border-box;
 }
-
-/* ── Vis area (height set by JS to fit content after layout) ── */
 
 .map__vis {
   width: 100%;
   min-height: 0;
-  height: 800px; /* initial layout area for Cola; JS overrides to fit content */
+  height: 800px;
   position: relative;
   overflow: visible;
 }
-
-/* ── SVG (links) — bleeds 250px on every side ── */
 
 .map__vis .links {
   position: absolute;
@@ -98,20 +87,21 @@ body.map-page {
   z-index: 1;
 }
 
-/* ── Link paths ── */
-
 .map__vis .link {
   fill: none;
+  pointer-events: none;
   transition: stroke 1s, stroke-opacity 1s, opacity 1s;
-  stroke: #eeeeee;
+  stroke: #ffffff;
 }
 
-/* ── Node wrapper ── */
-
+/* Shrink-wrap label; centering is translate(x,y) translate(-50%,-50%) on .node (see map.js).
+   (width:0 broke node__body width in some engines → thin “bar” instead of full pill/box.) */
 .map__vis .node {
   position: absolute;
   top: 0;
   left: 0;
+  width: max-content;
+  pointer-events: none;
   z-index: 5;
 }
 
@@ -119,40 +109,34 @@ body.map-page {
   display: none;
 }
 
-/* ── Node body ──
-   Centred on its x,y via translate(-50%,-50%).
-   Per-node --scale (set in JS) controls visual weight. */
-
 .map__vis .node .node__body {
   font-family: var(--font);
   line-height: 1em;
   font-size: 14px;
-  background-color: #E5EDFC;
+  background-color: #e5edfc;
   z-index: 10;
   border: 1px solid #9e9e9e;
   display: block;
   padding: 0.2em 0.3em;
   position: relative;
+  pointer-events: auto;
   transition: opacity 2s;
-  transform: translate(-50%, -50%) scale(var(--scale));
+  transform: scale(var(--scale));
+  transform-origin: center center;
   white-space: nowrap;
   cursor: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M56 24C56 37.95 41.35 49.51 32 56C22.65 49.51 8 37.95 8 24C8 15.46 13.82 10 21 10C25.92 10 30.15 12.97 32 17.21C33.85 12.97 38.08 10 43 10C50.18 10 56 15.46 56 24Z' fill='%23737373'/%3E%3C/svg%3E") 8 8, auto;
   user-select: none;
 }
 
-/* ── Movement nodes (uppercase pill) ── */
-
 .map__vis .node--movement .node__body {
   font-family: var(--font);
   font-size: 11px;
-  background-color: #FAD8B1;
+  background-color: #fad8b1;
   color: #2c2c2c;
   padding: 0.2em 0.3em;
   border-radius: 0;
   cursor: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M44 32L55.78 38.8L49.78 49.19L38 42.39V56H26V42.39L14.22 49.19L8.21997 38.8L20 32L8.21997 25.2L14.22 14.81L26 21.61V8H38V21.61L49.78 14.81L55.78 25.2L44 32Z' fill='%23737373'/%3E%3C/svg%3E") 8 8, auto;
 }
-
-/* ── Person nodes (mono pill, dark) ── */
 
 .map__vis .node--person .node__body {
   font-size: 11px;
@@ -161,14 +145,10 @@ body.map-page {
   word-spacing: -2px;
   padding: 0.27em 0.6em;
   border-radius: 2em;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #2c2c2c;
   cursor: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M52 29.53C52 30.09 51.62 30.58 50.93 30.75L48.44 31.37L47.44 37.38C47.16 39.03 46.08 39.99 44.59 39.99C44.29 39.99 43.97 39.95 43.64 39.87L38.01 38.46V41.99L43.12 52.2C43.71 53.38 44.01 54.67 44.01 55.99H16.01C16.01 50.53 20.01 45.99 26.01 42.99V36.25C21.25 33.73 18.01 28.74 18.01 22.99C18.01 14.71 24.73 7.98999 33.01 7.98999C41.29 7.98999 48.01 14.71 48.01 22.99C48.01 23.22 47.99 23.45 47.98 23.68L51.69 28.63C51.91 28.92 52.01 29.23 52.01 29.52L52 29.53Z' fill='%23737373'/%3E%3C/svg%3E") 8 8, auto;
 }
-
-/* ── Hover state ──
-   Nodes cascade through 4 opacity tiers,
-   links hidden except direct connections. */
 
 .map__vis--hover .node .node__body {
   opacity: 0.05;
@@ -209,8 +189,6 @@ body.map-page {
   stroke: black;
 }
 
-/* ── Outro ── */
-
 .map__outro {
   margin-top: 24px;
   max-width: 50ch;
@@ -233,4 +211,51 @@ body.map-page {
 
 .map__outro a:hover {
   color: #2c2c2c;
+}
+
+.map-main .map__vis-container {
+  min-height: 100%;
+}
+
+.map-main .map__vis {
+  height: calc(100vh - 2 * var(--pad-frame));
+  min-height: 0;
+}
+
+.map-stacks {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 48px;
+  row-gap: 12px;
+  width: fit-content;
+  max-width: 100%;
+  justify-content: start;
+}
+
+.map-stacks__group {
+  min-width: 0;
+}
+
+.map-stacks__title {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #737377;
+}
+
+.map-stacks__list {
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #3a3a3a;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.map-stacks__list li {
+  margin: 0;
 }
