@@ -10,6 +10,11 @@
   }
 
   function init() {
+    var touchLike =
+      (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) ||
+      (window.matchMedia && window.matchMedia("(max-width: 767px)").matches);
+    if (touchLike) return;
+
     var frames = document.querySelectorAll(".work-frame[data-work-tooltip]");
     if (!frames.length) return;
 
